@@ -7,7 +7,7 @@ import datetime
 from botocore.vendored import requests
 from boto3.dynamodb.conditions import Key, Attr
 
-API_KEY= 'm68Jb9xYu4eUQH0RKbjlFGOj6lzCEEdExprjLAj3Bw8inSDYbODwF1EO13wr1QXaz68XUeoB-Ay-yxwaC4y1KqqHOWc6towlxTvyAXKooWHtYAepY4okWAbeP1SlXHYx'
+API_KEY= 'api key' # put api key here
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 table = dynamodb.Table('yelp-restaurants')
 
@@ -60,12 +60,12 @@ def pollSNS():
                 cuisine = js['cuisine']
                 email = js['email']
                 phone = js['phone']
-                url = 'https://search-restaurant-domain-4hjdrkchdqq3by3xorhorx3dlu.us-east-1.es.amazonaws.com/restaurants/restaurant/_search?from=0&&size=1&&q=Cuisine:'+cuisine 
+                url = 'insert url here' # put url here
                 resp = requests.get(url,headers={"Content-Type": "application/json"}).json()
                 n_vals = resp['hits']["total"]
                 idx = random.randint(0,n_vals-1)
                 #print(idx)
-                url2 = 'https://search-restaurant-domain-4hjdrkchdqq3by3xorhorx3dlu.us-east-1.es.amazonaws.com/restaurants/restaurant/_search?from='+str(idx)+'&&size=1&&q=Cuisine:'+cuisine
+                url2 = 'url here' # put url here
                 resp = requests.get(url2,headers={"Content-Type": "application/json"}).json()
                 #print(resp)
                 res = resp['hits']['hits'][0]['_source']['RestaurantID']
