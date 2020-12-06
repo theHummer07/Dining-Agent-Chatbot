@@ -219,7 +219,7 @@ def restaurantApiCall(requestData):
     
     payload = ""
     headers = {
-        'Authorization': "Bearer m68Jb9xYu4eUQH0RKbjlFGOj6lzCEEdExprjLAj3Bw8inSDYbODwF1EO13wr1QXaz68XUeoB-Ay-yxwaC4y1KqqHOWc6towlxTvyAXKooWHtYAepY4okWAbeP1SlXHYx",
+        'Authorization': "API authorization key", # put api authorization key here
         'cache-control': "no-cache"
         }
     
