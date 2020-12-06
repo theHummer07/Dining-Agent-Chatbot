@@ -40,7 +40,7 @@ def request(host, path, url_params=None):
     url_params = url_params or {}
     url = urljoin(host, path)
     headers = {
-        'Authorization': 'Bearer ccJUZkyk9IKTnziyN1PcSmqh56SJYcIsxzBLxLqIEL2innFP3s2Cx4izjPfBb2s47MBL7nKpl6y9BEn4Ao3mt6kfZ4YXEM7TAtZEJPfIf1L8JkwxozgbjhCE-smKXHYx',
+        'Authorization': 'Authorization', # put authorization here
     }
 
     response = requests.request('GET', url, headers=headers, params=url_params)
