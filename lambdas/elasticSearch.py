@@ -15,7 +15,7 @@ def send(url, body=None):
 def putRequests():
     resp = table.scan()
     i = 1
-    url = 'https://search-restaurant-domain-4hjdrkchdqq3by3xorhorx3dlu.us-east-1.es.amazonaws.com/restaurants/restaurant'
+    url = 'url here' # put url here
     headers = {"Content-Type": "application/json"}
     while True:
         #print(len(resp['Items']))
